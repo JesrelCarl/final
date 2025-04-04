@@ -9,7 +9,7 @@ class TaskController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth'); // Protects all routes in this controller
+        // $this->middleware('auth'); // Protects all routes in this controller
     }
 
     public function index()
