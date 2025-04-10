@@ -14,11 +14,11 @@
         <!-- Scripts -->
         <link rel="stylesheet" href="{{env('APP_URL')}}build/assets/app-iU1YRGnh.css">
             <script src="{{env('APP_URL')}}build/assets/app-Cl5RxutH.js"></script>
+            <div class="d-flex" id="wrapper">
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
             @include('layouts.navigation')
-
             <!-- Page Heading -->
             @isset($header)
                 <header class="bg-white shadow">
@@ -27,7 +27,15 @@
                     </div>
                 </header>
             @endisset
-
+             <!-- Sidebar -->
+        <div class="bg-dark text-black p-3 vh-100" style="width: 250px;">
+            <h4>MyApp</h4>
+            <ul class="nav flex-column mt-4">
+                <li class="nav-item"><a href="/dashboard" class="nav-link text-black">Dashboard</a></li>
+                <li class="nav-item"><a href="/profile" class="nav-link text-black">Profile</a></li>
+                <li class="nav-item"><a href="/settings" class="nav-link text-black">Settings</a></li>
+            </ul>
+        </div>
             <!-- Page Content -->
             <main>
                 {{ $slot }}
